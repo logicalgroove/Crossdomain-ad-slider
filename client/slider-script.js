@@ -1,6 +1,5 @@
 var server_url = "http://www.exclusivelylux.com/ad/data/";
 
-var j = jQuery;
 var jQueryScriptOutputted = false;
 function initJQuery() {
 
@@ -34,6 +33,7 @@ function initJQuery() {
         setTimeout("initJQuery()", 50);
     } else {
 
+        var j = jQuery;
         j(function() {
 
           //load data drom server
