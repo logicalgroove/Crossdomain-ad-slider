@@ -1,0 +1,66 @@
+ .slider-container {
+   position: relative;
+   overflow: hidden;
+   width: 300px;
+   height: 220px;
+ }
+ .slider-container .items {
+   width: 2000em;
+   position: absolute;
+ }
+ .slider-container .items div {
+   float: left;
+ }
+
+ .slider-container .items .slider-overlay {
+   background: #fff;
+   bottom: 0;
+   display: none;
+   font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+   margin: 0;
+   opacity: 0.8;
+   padding: 10px;
+   position: absolute;
+   width: 280px;
+   height: 40px;
+ }
+
+ .slider-container .items .slider-overlay a {
+   border-bottom: none;
+   color: #00A6EB !important;
+   display: inline;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+ }
+
+ .slider-container .items .slider-overlay .slider-title {
+   font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+   display: block;
+   font-size: 18px;
+   color: #333;
+   text-shadow: 0 1px 0 #fff;
+ }
+ .slider-container .items .slider-overlay .slider-comment {
+   font-size: 12px
+ }
+ 
+ .navi {
+    width:280px;
+    padding: 10px;
+    height:20px;
+  }
+
+  .navi a {
+    width:13px;
+    height:13px;
+    float:left;
+    margin:3px;
+    background: url(http://www.exclusivelylux.com/ad/data/navigator.png) 0 0 no-repeat;
+    display:block;
+    font-size:1px;
+  }
+
+  .navi a:hover, a.active {
+    background-position: bottom;
+  }
