@@ -19,10 +19,9 @@
    font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
    margin: 0;
    opacity: 0.8;
-   padding: 10px;
+   padding: 5px 10px;
    position: absolute;
    width: 280px;
-   height: 40px;
  }
 
  .slider-container .items .slider-overlay a {
