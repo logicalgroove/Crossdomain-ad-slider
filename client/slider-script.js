@@ -41,14 +41,21 @@ function initJQuery() {
             function(data) {
 
               var sliderdata = '<div class="items">';
+              var dataArr = new Array();
 
               //parsing data from loaded JSON
               j.each(data.slides.slide, function(i,item){
                 var image_tag = '<a href="'+ item.link +'" target="_blank"><img src="'+ item.image +'" /></a>';
                 var title_tag = '<a class="slider-title" href="'+ item.link +'" target="_blank">'+ item.title +'</a>';
                 var comment_tag = '<span class="slider-comment">'+ item.comment +'</span>';
-                sliderdata += '<div>'+image_tag+'<span class="slider-overlay">'+ title_tag + comment_tag +'</span></div>';
+                dataArr[i] = '<div>'+image_tag+'<span class="slider-overlay">'+ title_tag + comment_tag +'</span></div>';
               });
+
+              dataArr.sort(function() {return 0.5 - Math.random()})
+
+              for (var o = 0; o< dataArr.length; o++ ) {
+                sliderdata += dataArr[o];
+              }
 
               sliderdata += "</div>"
 
