@@ -27,7 +27,17 @@ foreach($json_a[slide] as $s) {
   $image_tag = '<a href="'. $s[link] .'" target="_blank"><img src="'. $s[image] .'" /></a>';
   $title_tag = '<a class="slider-title" href="'. $s[link] .'" target="_blank">'. $s[title] .'</a>';
   $comment_tag = '<span class="slider-comment">'. $s[comment] .'</span>';
-  echo '<div>'.$image_tag.'<span class="slider-overlay">'. $title_tag . $comment_tag .'</span></div>';
+  $links_tag = '';
+  $links_counter = 0;
+  foreach($s[links] as $key => $l) {
+    $links_counter += 1;
+    if ($links_counter <= count($s[links])-1) {
+      $links_tag .= '<a href="'. $l .'">'. $key .'</a> - ';
+    } else {
+      $links_tag .= '<a href="'. $l .'">'. $key .'</a>';
+    }
+  }
+  echo '<div>'.$image_tag.'<span class="slider-overlay">'. $title_tag . $links_tag .'</span></div>';
 }
 
 echo '</div></div><div class="navi"></div>';
